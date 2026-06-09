@@ -10,6 +10,11 @@ N="\e[0m"
 
 mkdir -p $LOGS_FOLDER
 
+time_stamp(){
+
+    date "+%y-%m-%d %H:%M:%S"
+}
+
 START_TIME=$(date +%s)
 
 echo "Script start time at $[(timestamp)]" | tee -a $LOGS_FILE
