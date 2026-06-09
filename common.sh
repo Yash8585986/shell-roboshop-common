@@ -10,14 +10,12 @@ N="\e[0m"
 
 mkdir -p $LOGS_FOLDER
 
-time_stamp(){
+time_stamp="(date "+%y-%m-%d %H:%M:%S")"
 
-    date "+%y-%m-%d %H:%M:%S"
-}
 
 START_TIME=$(date +%s)
 
-echo "Script start time at $[(timestamp)]" | tee -a $LOGS_FILE
+echo "Script start time at $time_stamp" | tee -a $LOGS_FILE
 
 check_root(){
     if [ $USERID -ne 0 ]; then
