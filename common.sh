@@ -8,9 +8,11 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+mkdir -p $LOGS_FOLDER
+
 START_TIME=$(date +%s)
 
-echo "Script start time at $(date)" | tee -a $LOGS_FILE
+echo "Script start time at $(timestamp)" | tee -a $LOGS_FILE
 
 check_root(){
     if [ $USERID -ne 0 ]; then
@@ -19,7 +21,7 @@ check_root(){
     fi
 }
 
-mkdir -p $LOGS_FOLDER
+
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
