@@ -12,7 +12,7 @@ mkdir -p $LOGS_FOLDER
 
 START_TIME=$(date +%s)
 
-echo "Script start time at $(timestamp)" | tee -a $LOGS_FILE
+echo "Script start time at $[(timestamp)]" | tee -a $LOGS_FILE
 
 check_root(){
     if [ $USERID -ne 0 ]; then
@@ -25,10 +25,10 @@ check_root(){
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo -e "$time_stamp | $2 ... $R FAILURE $N" | tee -a $LOGS_FILE
+        echo -e "$[(timestamp)] | $2 ... $R FAILURE $N" | tee -a $LOGS_FILE
         exit 1
     else
-        echo -e "$time_stamp | $2 ... $G SUCCESS $N" | tee -a $LOGS_FILE
+        echo -e "$[(timestamp)] | $2 ... $G SUCCESS $N" | tee -a $LOGS_FILE
     fi
 }
 
