@@ -65,7 +65,7 @@ app_setup(){
     rm -rf /app/*
     VALIDATE $? "Removing existing code"
 
-    unzip /tmp/catalogue.zip &>>$LOGS_FILE
+    unzip /tmp/$app_name.zip &>>$LOGS_FILE
     VALIDATE $? "Uzip $app_name code"
 
 }
