@@ -1,6 +1,9 @@
 #!/bin/bash
 
 app_name="catalogue"
+MONGODB_HOST="mongodb.ramyaboutique.shop"
+
+
 source ./common.sh
 
 check_root
