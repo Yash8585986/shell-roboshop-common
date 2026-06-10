@@ -10,8 +10,5 @@ nodejs_setup
 systemd_setup
 
 
-
-
-
-
 restart_app
+print_total_time
