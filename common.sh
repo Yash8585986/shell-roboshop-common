@@ -81,7 +81,7 @@ systemd_setup(){
 }
 
 restart_app(){
-    
+
     systemctl restart $app_name
     VALIDATE $? "Restarting $app_name"
 }
@@ -97,6 +97,8 @@ LOGS_FOLDER="/var/log/shell-roboshop"
 # Using basename ensures the log file is named "script.sh.log" instead of "./script.sh.log"
 SCRIPT_NAME=$(basename "$0")
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
+SCRIPT_DIR="$PWD"
+MONGODB_HOST="mongodb.ramyaboutique.shop"
 
 R="\e[31m"
 G="\e[32m"
